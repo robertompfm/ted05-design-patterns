@@ -10,15 +10,15 @@ public class MontadorKitInfantil implements Montador {
 	}
 	
 	@Override
-	public void montarParteDeDentro(Sanduiche sanduiche, Batata batata) {
+	public void montarParteDeDentro(Sanduiche sanduiche, Batata batata, Brinquedo brinquedo) {
 		pedidoAtual.adicionarDentroDaCaixa(sanduiche.toString());
 		pedidoAtual.adicionarDentroDaCaixa(batata.toString());
+		pedidoAtual.adicionarDentroDaCaixa(brinquedo.toString());
 	}
 	
 	@Override
-	public void montarParteDeFora(Bebida bebida, Brinquedo brinquedo) {
+	public void montarParteDeFora(Bebida bebida) {
 		pedidoAtual.adicionarForaDaCaixa(bebida.toString());
-		pedidoAtual.adicionarForaDaCaixa(brinquedo.toString());
 	}
 	
 	@Override
